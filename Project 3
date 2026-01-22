@@ -1,0 +1,74 @@
+//Aaron Roldan-Martinez
+//COP2000.0T3
+//This project shall list all available holidays for a given month
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+	//program code goes here
+	string choice;
+	cout << "Please select a month of the year " << endl << endl;
+	//Jan 1 is New Years Day | Jan 15 is Martin Luther King, Jr.Day
+	//Feb 19 is Washington's Birthday
+	//April 1 is April Fools Day
+	//May 27 is Memorial Day
+	//Jun 19 is Juneteenth Day
+	//Jul 4 is Independence Day
+	//Sep 2 is Labor Day
+	//Oct 14 is Columbus Day
+	//Nov 11 is Veterans Day | Nov 28 is Thanksgiving Day
+	//Dec 25 is Christmas Day 
+
+	//menu
+	cout << "January" << endl;
+	cout << "February" << endl;
+	cout << "March" << endl;
+	cout << "April" << endl;
+	cout << "May" << endl;
+	cout << "June" << endl;
+	cout << "July" << endl;
+	cout << "August" << endl;
+	cout << "September" << endl;
+	cout << "October" << endl;
+	cout << "November" << endl;
+	cout << "December" << endl;
+
+	cout << "_____________ " << endl;
+
+	cin >> choice;
+	//validate input
+	if (choice == "January" || choice == "january" || choice == "Jan" || choice == "jan")
+		cout << "Jan 1 is New Years Day, Jan 15 is Martin Luther King, Jr.Day\n";
+	else if (choice == "February" || choice == "february" || choice == "Feb" || choice == "feb")
+		cout << "Feb 19 is Washington's Birthday\n";
+	else if (choice == "March" || choice == "march" || choice == "Mar"|| choice == "mar")
+		cout << "There are no federal holidays in March\n";
+	else if (choice == "April" || choice == "april" || choice == "Apr" || choice == "apr")
+		cout << "April 1 is April Fools Day\n";
+	else if (choice == "May" || choice == "may" || choice == "M" || choice == "m")
+		cout << "May 27 is Memorial Day\n";
+	else if (choice == "June" || choice == "june" || choice == "Jun" || choice == "jun")
+		cout << "Jun 19 is Juneteenth Day\n";
+	else if (choice == "July" || choice == "july" || choice == "Jul" || choice == "jul")
+		cout << "Jul 4 is Independence Day\n";
+	else if (choice == "August" || choice == "august" || choice == "Aug" || choice == "aug")
+		cout << "There are no federal holidays in August\n";
+	else if (choice == "September" || choice == "september" || choice == "Sep" || choice == "sep")
+		cout << "Sep 2 is Labor Day\n";
+	else if (choice == "October" || choice == "october" || choice == "Oct" || choice == "oct")
+		cout << "Oct 14 is Columbus Day\n";
+	else if (choice == "November" || choice == "november" || choice == "Nov" || choice == "nov")
+		cout << "November 11 is Veterans Day and November 28 is Thanksgiving Day\n";
+	else if (choice == "December" || choice == "december" || choice == "Dec" || choice == "dec")
+		cout << "Dec 25 is Christmas Day\n";
+	else
+		cout << "Invalid Input\n";
+	cout << "Thank you for using the holiday calculator. Happy Holidays!\n";
+
+	system("pause");
+	return 0;
+
+}
