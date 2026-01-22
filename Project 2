@@ -1,0 +1,33 @@
+//Aaron Roldan-Martinez
+//COP2000.0T3
+//This Project is designed to calculate gross income 
+
+#include <iostream>
+#include <string>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+	//program code goes here
+	float Pay_Rate;
+	string name;
+	double Gross_Income;
+	float numHours;
+
+	cout << "Welcome to your gross income calculator!";
+	cout << "\nEnter your name: ";
+	getline(cin, name);
+	cout << "Enter your Pay Rate: ";
+	cin >> Pay_Rate;
+	cout << "How many hours have you worked? ";
+	cin >> numHours;
+
+	//displays to screen
+	cout << name << endl << "Your hourly rate is " << Pay_Rate << " Per Hour." << endl;
+	Gross_Income = Pay_Rate * numHours;
+	cout << fixed << setprecision(2);
+	cout << "You have earned $" << Gross_Income << "\nThank you for using Gross Income Calculator. Goodbye!" << endl;
+	system("pause");
+	return 0;
+} 
