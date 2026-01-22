@@ -1,0 +1,64 @@
+//Aaron Roldan-Martinez
+//COP2000.0T3
+//Demonstrates a class named Dice. It will use the random number generator to simulate rolling a 6 - sided Die 100 times counting how many times each number of the comes up.
+
+
+#include <iostream>
+#include <cstdlib> // for rand function
+#include <ctime>
+
+using namespace std;
+
+// Define Dice class
+class Dice 
+{
+private:
+    int one, two, three, four, five, six;
+
+public:
+    // Initialize counts to zero
+    Dice() : one(0), two(0), three(0), four(0), five(0), six(0) {}
+
+    // Roll the dice 100 times
+    void roll() {
+        srand(time(0)); // Seed random number generator
+        int result_of_roll;
+        for (int count = 1; count <= 100; count++) {
+            result_of_roll = rand() % 6 + 1; // Random number between 1 and 6
+            cout << "Dice Roll " << count << ":\t" << "Number Shown: " << result_of_roll << endl;
+            switch (result_of_roll) {
+            case 1: one++; break;
+            case 2: two++; break;
+            case 3: three++; break;
+            case 4: four++; break;
+            case 5: five++; break;
+            case 6: six++; break;
+            }
+        }
+    }
+
+    // Display the results
+    void display() const {
+        cout << "\nCount of Ones: " << one << endl;
+        cout << "Count of Twos: " << two << endl;
+        cout << "Count of Threes: " << three << endl;
+        cout << "Count of Fours: " << four << endl;
+        cout << "Count of Fives: " << five << endl;
+        cout << "Count of Sixes: " << six << endl;
+    }
+};
+
+int main() {
+    cout << "Press any key to begin rolling the dice 100 times" << endl;
+    cin.get();
+
+    //Dice as an object
+    Dice dice;
+
+    // Roll the dice and display results
+    dice.roll();
+    dice.display();
+
+    system("pause");
+    return 0;
+}
